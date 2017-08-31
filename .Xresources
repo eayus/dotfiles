@@ -1,0 +1,37 @@
+URxvt*scrollBar: false
+URxvt*transparent: false
+URxvt*depth: 32
+
+URxvt*font: xft:xos4 Terminess Powerline:style=Regular:pixelsize=14
+URxvt.boldFont: *-terminus-bold-*-normal-*-14-*-*-*-*-*-*
+URxvt*letterSpace: 0
+URxvt*lineSpace: 2
+URxvt*cursorUnderline: true
+
+URxvt*internalBorder: 20 
+
+*color0:                  #383544
+*color1:                  #DAA169
+*color2:                  #6C7C82
+*color3:                  #778489
+*color4:                  #A09894
+*color5:                  #D3B29D
+*color6:                  #F0CCA4
+*color7:                  #FCE4D5
+*color9:                  #999999
+*color8:                  #DAA169
+*color10:                 #6C7C82
+*color11:                 #778489
+*color12:                 #A09894
+*color13:                 #D3B29D
+*color14:                 #F0CCA4
+*color15:                 #FCE4D5
+
+*background:              #383544
+*foreground:              #A09894
+
+rofi.font: xos4\ Terminus 14
+rofi.color-window: argb:80191919, argb:60181818, #1919191
+rofi.color-normal: argb:0095C7AE, #A09894, argb:0095C7AE, argb:80101218, #95C7A
+rofi.padding: 400
+rofi.separator-style: none
