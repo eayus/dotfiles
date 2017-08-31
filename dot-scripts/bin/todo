@@ -1,0 +1,27 @@
+#!/bin/bash
+
+FILE="/home/ellis/.scripts/todo.txt"
+
+case $1 in
+    --add | -a)
+        echo "$2" >> $FILE
+        ;;
+    --clear | -c)
+        > $FILE
+        ;;
+    --delete | -d)
+        sed -i -e "$2"'d' $FILE
+        ;;
+    --print | -p)
+        COUNT=0
+        while read -r line; do
+            COUNT=$(( $COUNT + 1 ))
+            echo "$COUNT)  $line"
+        done < $FILE
+        ;;
+    *)
+        echo -e "[ERROR]: That it is not a valid option"
+esac
+exit 0
+
+
