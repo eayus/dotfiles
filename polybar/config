@@ -1,0 +1,61 @@
+[bar/top]
+monitor = HDMI-0
+width = 100%
+height = 25 
+bottom = false
+padding-left = 5
+padding-right = 5
+
+background = #00FFFFFF
+foreground = #FFFFFF
+
+font-0 = FiraMono:style=Regular:size=9;1
+font-2 = Dina:style=Regular:pixelsize=13;1
+font-1 = FontAwesome:fontformat=truetype:size=8;1
+
+wm-name = topbar
+
+modules-left = bspwm
+modules-center = date
+modules-right = song 
+
+[module/date]
+type = custom/script
+exec = echo "  $(date +'%I:%M  %A %d %B')"
+interval = 1
+click-left = gnome-calendar
+ 
+
+[module/song]
+type = custom/script
+exec = mpc | head -1
+interval = 2
+click-left = ~/.config/polybar/scripts/pauseToggle.sh
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+ws-icon-0 = Internet;
+ws-icon-1 = Code; 
+ws-icon-2 = Music; 
+ws-icon-3 = Games; 
+ws-icon-4 = Other; 
+ws-icon-default =  
+
+label-visible-underline = #FFFFFF
+label-focused = %icon%
+label-focused-foreground = #C0C3CA
+label-focused-underline = #FFFFFF
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-foreground = #FFFFFF
+label-occupied-underline = #FFFFFF
+label-occupied-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #FFFFFF
+label-empty-underline = #FFFFFF
+label-empty-padding = 2
