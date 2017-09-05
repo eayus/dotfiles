@@ -30,7 +30,7 @@ click-left = gnome-calendar
 type = custom/script
 exec = mpc | head -1
 interval = 2
-click-left = ~/.config/polybar/scripts/pauseToggle.sh
+click-left = mpc toggle
 
 [module/bspwm]
 type = internal/bspwm
